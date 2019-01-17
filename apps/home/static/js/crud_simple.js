@@ -27,15 +27,15 @@ function FormunarioJs(btnNuevo, table, formulario, data, titulo, urlagregar, url
     formulario.submit(function (event) {
         event.preventDefault();
         $("#Modal").modal('hide');
-        // $('.Contenedor').waitMe({
-        //     effect: 'ios',
-        //     text: '',
-        //     maxSize: '',
-        //     waitTime: -1,
-        //     textPos: 'vertical',
-        //     fontSize: '',
-        //     source: '',
-        // });
+        $('.content-page').waitMe({
+            effect: 'ios',
+            text: '',
+            maxSize: '',
+            waitTime: -1,
+            textPos: 'vertical',
+            fontSize: '',
+            source: '',
+        });
         var post_url = $(this).attr("action");
         var request_method = $(this).attr("method");
         var formData = new FormData($(this)[0]);
@@ -47,19 +47,19 @@ function FormunarioJs(btnNuevo, table, formulario, data, titulo, urlagregar, url
             contentType: false,   // tell jQuery not to set contentType
             success: function (response) {
                 if (typeof response.datos === 'undefined') {
-                    // $('.Contenedor').waitMe("hide");
+                    $('.content-page').waitMe("hide");
                     $("#Modal").modal('show');
                     $("#Modal").find(".modal-body").html(response);
                 }
                 else {
-                    // $('.Contenedor').waitMe("hide");
+                    $('.content-page').waitMe("hide");
                     table.ajax.reload();
                     $.notify(response.mensaje + " (" + response.datos.descripcion + ")", "success");
                 }
             },
             error: function (response) {
                 console.log(response)
-                // $('.Contenedor').waitMe("hide");
+                $('.content-page').waitMe("hide");
                 $.notify("Ocurrio algo inesperado", "error");
 
             }
@@ -75,15 +75,15 @@ function SaveFormulario(formulario, table) {
     formulario.submit(function (event) {
         event.preventDefault();
         $("#Modal").modal('hide');
-        // $('.Contenedor').waitMe({
-        //     effect: 'ios',
-        //     text: '',
-        //     maxSize: '',
-        //     waitTime: -1,
-        //     textPos: 'vertical',
-        //     fontSize: '',
-        //     source: '',
-        // });
+        $('.content-page').waitMe({
+            effect: 'ios',
+            text: '',
+            maxSize: '',
+            waitTime: -1,
+            textPos: 'vertical',
+            fontSize: '',
+            source: '',
+        });
         var post_url = $(this).attr("action");
         var request_method = $(this).attr("method");
         var formData = new FormData($(this)[0]);
@@ -95,17 +95,17 @@ function SaveFormulario(formulario, table) {
             contentType: false,   // tell jQuery not to set contentType
             success: function (response) {
                 if (typeof response.datos === 'undefined') {
-                    $('.Contenedor').waitMe("hide");
+                    $('.content-page').waitMe("hide");
                     $("#Modal").modal('show');
                     $("#Modal").find(".modal-body").html(response);
                 } else {
-                    // $('.Contenedor').waitMe("hide");
+                    $('.Contenedor').waitMe("hide");
                     table.ajax.reload();
                     $.notify(response.mensaje + " (" + response.datos.descripcion + ")", "success");
                 }
             },
             error: function (response) {
-                // $('.Contenedor').waitMe("hide");
+                $('.content-page').waitMe("hide");
                 $.notify("Ocurrio algo inesperado", "error");
 
             }
@@ -119,15 +119,15 @@ function SaveFormularioSolo(formulario, modal) {
     formulario.submit(function (event) {
         event.preventDefault();
         modal.modal('hide');
-        // $('.Contenedor').waitMe({
-        //     effect: 'ios',
-        //     text: '',
-        //     maxSize: '',
-        //     waitTime: -1,
-        //     textPos: 'vertical',
-        //     fontSize: '',
-        //     source: '',
-        // });
+        $('.content-page').waitMe({
+            effect: 'ios',
+            text: '',
+            maxSize: '',
+            waitTime: -1,
+            textPos: 'vertical',
+            fontSize: '',
+            source: '',
+        });
         var post_url = $(this).attr("action");
         var request_method = $(this).attr("method");
         var formData = new FormData($(this)[0]);
@@ -139,17 +139,17 @@ function SaveFormularioSolo(formulario, modal) {
             contentType: false,   // tell jQuery not to set contentType
             success: function (response) {
                 if (typeof response.datos === 'undefined') {
-                    // $('.Contenedor').waitMe("hide");
+                    $('.content-page').waitMe("hide");
                     modal.modal('show');
                     modal.find(".modal-body").html(response);
                 } else {
-                    $('.Contenedor').waitMe("hide");
+                    $('.content-page').waitMe("hide");
                     $.notify(response.mensaje + " (" + response.datos.descripcion + ")", "success");
 
                 }
             },
             error: function (response) {
-                // $('.Contenedor').waitMe("hide");
+                $('.content-page').waitMe("hide");
                 $.notify("Ocurrio algo inesperado", "error");
             }
         });
