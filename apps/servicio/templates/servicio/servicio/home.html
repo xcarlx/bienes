@@ -133,6 +133,7 @@
                         $(this).addClass('active');
                         $("#idTabla_form").load("{% url 'comentario-home' 123 %}".replace("123", datos_servicio.id));
                         $("#idTituloCard").html(datos_servicio.nombre);
+                        valor = "2";
                     }
                 });
             });
@@ -197,7 +198,6 @@
                         }
                         else {
                             $('.content-page').waitMe("hide");
-
                             if (valor === "0") {
                                 $("#idTabla_form").load("{% url 'videos-home' 123 %}".replace("123", datos_servicio.id));
                                 $(this).addClass('active');
