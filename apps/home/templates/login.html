@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+
+    <!-- Core CSS -->
+    <link href="{% static 'pike/assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'pike/assets/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'pike/assets/css/login.css' %}" rel="stylesheet">
+
+    <!-- Checkboxes style -->
+    <link href="{% static 'pike/assets/css/bootstrap-checkbox.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="login-menu">
+    <div class="container">
+        <nav class="nav">
+            <a class="nav-link" href="{% url 'home' %}">Principal</a>
+            {#          <a class="nav-link active" href="https://www.pikeadmin.com/login">Login</a>#}
+        </nav>
+    </div>
+</div>
+
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+
+        <div class="card">
+            <h4 class="card-header">Login</h4>
+
+            <div class="card-body" style="max-width: 400px">
+
+                <form enctype="multipart/form-data"
+                      role="form"
+                      method="post"
+                      action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="break-word help-block with-errors text-black-50">{{ form.non_field_errors }}</div>
+                    </div>
+                    {% for field in form %}
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    {{ field.label_tag }}
+                                    <div class="input-group">
+                                        {{ field }}
+                                    </div>
+
+                                    {% if field.help_text %}
+                                        <p class="help">{{ field.help_text|safe }}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="clear"></div>
+
+                <i class="fa fa-user fa-fw"></i> Inicie session para ver la información </br>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="{% static 'pike/assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'pike/assets/js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>
+

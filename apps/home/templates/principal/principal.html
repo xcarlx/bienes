@@ -1,0 +1,83 @@
+{% extends 'pike/index.html' %}
+{% load static %}
+
+{% block titulo_master %}
+    Principal
+{% endblock %}
+{% block titulo_padre %}
+    Administracion
+{% endblock %}
+{% block titulo_secons %}
+    Principal
+{% endblock %}
+
+{% block cuerpo_master %}
+    <div class="Contenedor">
+        <div class="dt-buttons">
+            <button id="btnNuevo" type="button" class="btn btn-info fa fa-file"></button>
+        </div>
+    </div>
+
+
+    {% include "template/template_table.html" %}
+    {% include "template/template_modal.html" %}
+
+{% endblock %}
+
+{% block script_master %}
+    <script src="{% static 'js/config_table.js' %}"></script>
+    <script src="{% static 'js/crud_simple.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var columnas = [
+                {
+                    title: 'Imagen',
+                    data: 'imagen',
+                    width: "10%",
+                    'render': function (data, type, full, meta) {
+                        return '<img src="' + data + '" style="height:100px;width:100px;"/>';
+                    }
+                },
+                {
+                    title: 'Titulo',
+                    data: 'titulo',
+                    width: "20%"
+                },
+                {
+                    title: 'Sub Titulo',
+                    data: 'subtitulo',
+                    width: "20%"
+                },
+                {
+                    title: 'Descripcion',
+                    data: 'descripcion',
+                    width: "40%"
+                },
+                {
+                    title: "Acciones",
+                    width: "10%",
+                },
+                {
+                    title: "Acciones",
+                    width: "10%",
+                    visible: false
+                }
+            ];
+            var listadatos = "{% url 'adm-data' %}";
+            var lenguaje = "{% static 'json/DataTableSpanish.json' %}";
+            var table = $('#tabla').DataTable(ConfigTable(listadatos, columnas, lenguaje));
+            var urlagregar = "{% url 'adm-agregar' %}";
+            var urleditar = "{% url 'adm-editar' 123 %}";
+            var urleliminar = "{% url 'adm-eliminar' 123 %}";
+            var titulo = "Principal";
+            var data = null;
+            var btnNuevo = $("#btnNuevo");
+            var formulario = $("#Formulario");
+            $('#Modal').on('shown.bs.modal', function (e) {
+                $('#id_titulo').trigger('focus')
+            });
+            FormunarioJs(btnNuevo, table, formulario, data, titulo, urlagregar, urleditar, urleliminar)
+        });
+    </script>
+{% endblock %}
+

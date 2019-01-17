@@ -1,0 +1,12 @@
+
+{% for field in form %}
+
+    <div class="form-group">
+        <span class="badge badge-danger col col-md-12">{{ field.errors }}</span>
+        {{ field.label_tag }}
+        {{ field}}
+    </div>
+
+
+{% endfor %}
+

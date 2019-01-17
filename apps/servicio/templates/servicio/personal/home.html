@@ -1,0 +1,75 @@
+{% extends 'pike/index.html' %}
+{% load static %}
+
+{% block titulo_master %}
+    Personal
+{% endblock %}
+{% block titulo_padre %}
+    Servicio
+{% endblock %}
+{% block titulo_secons %}
+    Personal
+{% endblock %}
+
+{% block cuerpo_master %}
+    <div class="Contenedor">
+        <div class="dt-buttons">
+            <button id="btnNuevo" type="button" class="btn btn-info fa fa-file"></button>
+        </div>
+    </div>
+
+
+    {% include "template/template_table.html" %}
+    {% include "template/template_modal.html" %}
+
+{% endblock %}
+
+{% block script_master %}
+    <script src="{% static 'js/config_table.js' %}"></script>
+    <script src="{% static 'js/crud_simple.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var columnas = [
+
+                {
+                    title: 'Nombres',
+                    data: 'nombre_completo',
+                    width: "40%"
+                },
+                {
+                    title: 'Telefono',
+                    data: 'telefono',
+                    width: "10%"
+                }, {
+                    title: 'Correo',
+                    data: 'correo',
+                    width: "20%"
+                },
+                {
+                    title: "Acciones",
+                    width: "10%",
+                },
+                {
+                    title: "Acciones",
+                    width: "10%",
+                    visible: false
+                }
+            ];
+            var listadatos = "{% url 'personal-data' %}";
+            var lenguaje = "{% static 'json/DataTableSpanish.json' %}";
+            var table = $('#tabla').DataTable(ConfigTable(listadatos, columnas, lenguaje));
+            var urlagregar = "{% url 'personal-agregar' %}";
+            var urleditar = "{% url 'personal-editar' 123 %}";
+            var urleliminar = "{% url 'personal-eliminar' 123 %}";
+            var titulo = "Persona";
+            var data = null;
+            var btnNuevo = $("#btnNuevo");
+            var formulario = $("#Formulario");
+            $('#Modal').on('shown.bs.modal', function (e) {
+                $('#id_telefono').trigger('focus')
+            });
+            FormunarioJs(btnNuevo, table, formulario, data, titulo, urlagregar, urleditar, urleliminar);
+        });
+    </script>
+{% endblock %}
+

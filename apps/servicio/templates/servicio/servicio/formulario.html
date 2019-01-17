@@ -1,0 +1,23 @@
+{% for field in form %}
+    {% if field.is_hidden %}
+        {{ field }}
+    {% else %}
+        <div class="{% cycle 'cicle' '' as rowcolors %}" style="margin: 0.2em">
+            {% if rowcolors %}
+                <div class="row">
+                    <div class="col col-md-6">
+                        <span class="badge badge-danger col col-md-12">{{ field.errors }}</span>
+                        {{ field.label_tag }}
+                        {{ field }}
+                    </div>
+                    <div class="col col-md-6">
+                        {% else %}
+                        <span class="badge badge-danger col col-md-12">{{ field.errors }}</span>
+                        {{ field.label_tag }}
+                        {{ field }}
+                    </div>
+                </div>
+                </div>
+            {% endif %}
+    {% endif %}
+{% endfor %}

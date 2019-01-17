@@ -1,0 +1,271 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INMOCASA</title>
+    <meta name="description" content="Todo inmoviliaria">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'pike/assets/images/favicon.ico' %}">
+
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'pike/assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+
+    <!-- Font Awesome CSS -->
+    <link href="{% static 'pike/assets/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"/>
+
+    <!-- Custom CSS -->
+    <link href="{% static 'pike/assets/css/style.css' %}" rel="stylesheet" type="text/css"/>
+
+    <!-- BEGIN CSS for this page -->
+    <link href="{% static 'pike/assets/css/dataTables.bootstrap4.min.css' %}" rel="stylesheet" type="text/css"/>
+
+    <!-- END CSS for this page -->
+    <link href="{% static 'pike/assets/css/buttons.dataTables.min.css' %}" rel="stylesheet" type="text/css"/>
+
+    {% block style_master %}
+
+    {% endblock %}
+
+</head>
+
+<body class="adminbody">
+
+<div id="main">
+
+    <!-- top bar navigation -->
+    <div class="headerbar">
+
+        <!-- LOGO -->
+        <div class="headerbar-left">
+            <a href="{% url 'home' %}" class="logo"><img alt="Logo" src="{% static 'pike/assets/images/logo.png' %}"/>
+                <span>Admin</span></a>
+        </div>
+
+        <nav class="navbar-custom">
+
+            <ul class="list-inline float-right mb-0">
+
+                <li class="list-inline-item dropdown notif">
+                    <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="false" aria-expanded="false">
+                        <img src="{% static 'pike/assets/images/avatars/admin.png' %}" alt="Profile image"
+                             class="avatar-rounded">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                        <!-- item-->
+                        <div class="dropdown-item noti-title">
+                            <h5 class="text-overflow">
+                                <small>Hello, admin</small>
+                            </h5>
+                        </div>
+
+                        <!-- item-->
+                        <a href="{% url 'logout' %}" class="dropdown-item notify-item">
+                            <i class="fa fa-fw fa-user"></i> <span>Logout</span>
+                        </a>
+
+
+                    </div>
+                </li>
+
+            </ul>
+
+            <ul class="list-inline menu-left mb-0">
+                <li class="float-left">
+                    <button class="button-menu-mobile open-left">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+                </li>
+            </ul>
+
+        </nav>
+
+    </div>
+    <!-- End Navigation -->
+
+
+    <!-- Left Sidebar -->
+    <div class="left main-sidebar">
+
+        <div class="sidebar-inner leftscroll">
+
+            <div id="sidebar-menu">
+
+                <ul class="app-menu">
+
+                    <li class="submenu">
+                        <a class="active" href="{% url 'home-administracion' %}"><i class="fa fa-fw fa-bars"></i><span> Inicio </span>
+                        </a>
+                    </li>
+
+                    <li class="submenu">
+                        <a href="#"><i class="fa fa-fw fa-cogs"></i> <span> Administracion </span> <span
+                                class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                            <li><a href="{% url 'adm-principal' %}">Principal</a></li>
+                            <li><a href="#">Nosotros</a></li>
+                            <li><a href="#">Contactos</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#"><i class="fa fa-fw fa-building"></i> <span> Bienes </span> <span
+                                class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                            <li><a href="{% url 'servicio-home' %}">Servicio</a></li>
+                            <li><a href="{% url 'personal-principal' %}">Personas</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+                <div class="clearfix"></div>
+
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+
+    </div>
+    <!-- End Sidebar -->
+
+
+    <div class="content-page">
+
+        <!-- Start content -->
+        <div class="content">
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="breadcrumb-holder">
+                            <h1 class="main-title float-left">{% block titulo_master %}
+
+                            {% endblock %}</h1>
+                            <ol class="breadcrumb float-right">
+                                <li class="breadcrumb-item">{% block titulo_padre %}
+
+                                {% endblock %}</li>
+                                <li class="breadcrumb-item active">
+                                    {% block titulo_secons %}
+
+                                    {% endblock %}
+                                </li>
+                            </ol>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                {% block cuerpo_master %}
+
+                                {% endblock %}
+
+                            </div>
+                        </div><!-- end card-->
+                    </div>
+                </div>
+
+            </div>
+            <!-- END container-fluid -->
+
+        </div>
+        <!-- END content -->
+
+    </div>
+    <!-- END content-page -->
+
+    <footer class="footer">
+		<span class="text-right">
+		Copyright <a target="_blank" href="#">Your Website</a>
+		</span>
+        <span class="float-right">
+		Powered by <a target="_blank" href="https://www.pikeadmin.com"><b>Pike Admin</b></a>
+		</span>
+    </footer>
+
+</div>
+<!-- END main -->
+
+<script src="{% static 'pike/assets/js/modernizr.min.js' %}"></script>
+<script src="{% static 'pike/assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'pike/assets/js/moment.min.js' %}"></script>
+
+<script src="{% static 'pike/assets/js/popper.min.js' %}"></script>
+<script src="{% static 'pike/assets/js/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'pike/assets/js/detect.js' %}"></script>
+<script src="{% static 'pike/assets/js/fastclick.js' %}"></script>
+<script src="{% static 'pike/assets/js/jquery.blockUI.js' %}"></script>
+<script src="{% static 'pike/assets/js/jquery.nicescroll.js' %}"></script>
+
+<!-- App js -->
+<script src="{% static 'pike/assets/js/pikeadmin.js' %}"></script>
+
+<!-- BEGIN Java Script for this page -->
+<script src="{% static 'pike/assets/js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'pike/assets/js/dataTables.bootstrap4.min.js' %}"></script>
+
+
+<!-- Counter-Up-->
+<script src="{% static 'pike/assets/plugins/waypoints/lib/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'pike/assets/plugins/counterup/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'pike/assets/js/dataTables.buttons.min.js' %}"></script>
+<script src="{% static 'pike/assets/js/notify.min.js' %}"></script>
+
+{#<script>#}
+{#    $(document).ready(function () {#}
+{#        // data-tables#}
+{#        $('#example1').DataTable();#}
+{##}
+{#        // counter-up#}
+{#        $('.counter').counterUp({#}
+{#            delay: 10,#}
+{#            time: 600#}
+{#        });#}
+{#    });#}
+{#</script>#}
+
+<script>
+
+    var styles = {
+        display: "block",
+    };
+    var pathname = window.location.pathname; // Returns path only
+    $("#sidebar-menu .app-menu .submenu a").each(function () {
+        if ($(this).parent().attr("class") == "submenu") {
+            $($(this)).each(function () {
+                $(this).removeClass("active");
+                $(this).removeClass("subdrop");
+            });
+        }
+        if ($(this).attr("href") == pathname) {
+            $(this).parent().addClass('subdrop');
+            $(this).parent().addClass('active');
+            $(this).parent().find('li').addClass('active');
+            $(this).parent().parent().find('a').addClass('active');
+            $(this).parent().parent().parent().find('a').addClass('active');
+
+            $(this).parent().parent().parent().find("ul").css(styles);
+        }
+
+
+    });
+
+</script>
+<!-- END Java Script for this page -->
+
+{% block script_master %}
+
+{% endblock %}
+</body>
+</html>

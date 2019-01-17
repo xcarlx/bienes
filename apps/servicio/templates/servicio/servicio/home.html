@@ -1,0 +1,245 @@
+{% extends 'pike/index.html' %}
+{% load static %}
+{% block titulo_padre %}
+    Bienes
+{% endblock %}
+
+{% block titulo_master %}
+    Servicio
+{% endblock %}
+
+{% block titulo_secons %}
+    Servicio
+{% endblock %}
+{% block style_master %}
+    <link href="{% static 'pike/assets/css/select.dataTables.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'pike/assets/plugins/fancybox/jquery.fancybox.min.css' %}" rel="stylesheet" type="text/css"/>
+
+{% endblock %}
+{% block cuerpo_master %}
+    <div class="row">
+        <div class="col-md-7">
+            <div class="card" style="margin: 0.2em">
+                <div class="card-body">
+                    <h4 class="card-title">Servicio</h4>
+
+                    <div class="dt-buttons" style="margin: 0.2em">
+                        <button id="btnNuevo" type="button" class="btn btn-info fa fa-file"></button>
+                    </div>
+
+                    {% include "template/template_table.html" %}
+                    {#            <a href="#" class="card-link">Card link</a>#}
+                    {#            <a href="#" class="card-link">Another link</a>#}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card" style="margin: 0.2em">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" valor="0">Videos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" valor="1">Fotos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#" valor="2">Comentario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" valor="3">Punto Geografico</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" valor="4">Dimensiones</a>
+                        </li>
+                        {#                        <li class="nav-item">#}
+                        {#                            <a class="nav-link disabled" href="#">Disabled</a>#}
+                        {#                        </li>#}
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <h4 class=hard-title" id="idTituloCard"></h4>
+                    <div id="idTabla_form"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "template/template_modal_larg.html" %}
+    {% include "template/template_modal2.html" %}
+{% endblock %}
+
+{% block script_master %}
+    <script src="{% static 'pike/assets/js/dataTables.select.min.js' %}"></script>
+    <script src="{% static 'js/config_table.js' %}"></script>
+    <script src="{% static 'js/crud_simple.js' %}"></script>
+
+    <script src="{% static 'pike/assets/plugins/fancybox/jquery.fancybox.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            let valor = 0;
+            const columnas = [
+
+                {
+                    title: 'Nombres',
+                    data: 'nombre',
+                    width: "40%"
+                },
+                {
+                    title: 'Tipo',
+                    data: 'tipo_inmueble',
+                    width: "20%"
+                },
+                {
+                    title: "Acciones",
+                    width: "10%",
+                },
+                {
+                    title: "Acciones",
+                    width: "10%",
+                    visible: false
+                }
+            ];
+            var listadatos = "{% url 'servicio-data' %}";
+            var lenguaje = "{% static 'json/DataTableSpanish.json' %}";
+            var table = $('#tabla').DataTable(ConfigTable(listadatos, columnas, lenguaje));
+            var urlagregar_servicio = "{% url 'servicio-agregar' %}";
+            var urleditar_servicio = "{% url 'servicio-editar' 123 %}";
+            var urleliminar_servicio = "{% url 'servicio-eliminar' 123 %}";
+            var titulo = "Servicio";
+            var data = null;
+            var btnNuevo = $("#btnNuevo");
+            var formulario = $("#Formulario");
+            $('#Modal').on('shown.bs.modal', function (e) {
+                $('#id_nombre').trigger('focus')
+            });
+            FormunarioJs(btnNuevo, table, formulario, data, titulo, urlagregar_servicio, urleditar_servicio, urleliminar_servicio);
+
+            var datos_servicio = null;
+            $('#tabla tbody').on('click', 'tr', function () {
+                var id = table.row(this).data().id;
+                if (datos_servicio != null) {
+                    if (id !== datos_servicio.id) {
+                        $(".nav-item").find("a").each(function (index) {
+                            $(this).removeClass('active');
+                            $("#idTituloCard").html("");
+                            $("#idTabla_form").html("");
+
+                        });
+                    }
+                }
+                datos_servicio = table.row(this).data();
+                $(".nav-item").find("a").each(function (index) {
+                    if ($(this).attr("valor") === "2") {
+                        $(this).addClass('active');
+                        $("#idTabla_form").load("{% url 'comentario-home' 123 %}".replace("123", datos_servicio.id));
+                        $("#idTituloCard").html(datos_servicio.nombre);
+                    }
+                });
+            });
+
+            $(".nav-item").each(function (index) {
+                $(this).find("a").removeClass('active');
+            });
+            $(".nav li").click(function (e) {
+                $(".nav-item").find("a").each(function (index) {
+                    $(this).removeClass('active');
+                });
+                if (datos_servicio != null) {
+                    $(this).find("a").addClass("active");
+                    $("#idTituloCard").html(datos_servicio.nombre);
+                    valor = $(this).find("a").attr("valor");
+                }
+                if (valor === "0") {
+                    $("#idTabla_form").load("{% url 'videos-home' 123 %}".replace("123", datos_servicio.id));
+                } else if (valor === "1") {
+                    $("#idTabla_form").load("{% url 'fotos-home' 123 %}".replace("123", datos_servicio.id));
+
+                } else if (valor === "2") {
+                    $("#idTabla_form").load("{% url 'comentario-home' 123 %}".replace("123", datos_servicio.id));
+
+                } else if (valor === "3") {
+                    $("#idTabla_form").load("{% url 'punto_geografico-home' 123 %}".replace("123", datos_servicio.id));
+                } else if (valor === "4") {
+                    $("#idTabla_form").load("{% url 'dimensiones-home' 123 %}".replace("123", datos_servicio.id));
+                } else {
+                    $("#idTabla_form").html("");
+                    $("#idTituloCard").html("");
+                }
+
+            });
+            $("#Formulario2").submit(function (event) {
+                event.preventDefault();
+                var modal = $("#Modal2");
+                modal.modal('hide');
+                // $('.Contenedor').waitMe({
+                //     effect: 'ios',
+                //     text: '',
+                //     maxSize: '',
+                //     waitTime: -1,
+                //     textPos: 'vertical',
+                //     fontSize: '',
+                //     source: '',
+                // });
+                var post_url = $(this).attr("action");
+                var request_method = $(this).attr("method");
+                var formData = new FormData($(this)[0]);
+                $.ajax({
+                    url: post_url,
+                    type: request_method,
+                    data: formData,
+                    processData: false,  // tell jQuery not to process the data
+                    contentType: false,   // tell jQuery not to set contentType
+                    success: function (response) {
+                        if (typeof response.datos === 'undefined') {
+                            // $('.Contenedor').waitMe("hide");
+                            modal.modal('show');
+                            modal.find(".modal-body").html(response);
+                        }
+                        else {
+                            // $('.Contenedor').waitMe("hide");
+
+                            if (valor === "0") {
+                                $("#idTabla_form").load("{% url 'videos-home' 123 %}".replace("123", datos_servicio.id));
+                                $(this).addClass('active');
+                                $("#idTituloCard").html(datos_servicio.nombre);
+                            } else if (valor === "1") {
+                                $("#idTabla_form").load("{% url 'fotos-home' 123 %}".replace("123", datos_servicio.id));
+                                $(this).addClass('active');
+                                $("#idTituloCard").html(datos_servicio.nombre);
+
+                            } else if (valor === "2") {
+                                $("#idTabla_form").load("{% url 'comentario-home' 123 %}".replace("123", datos_servicio.id));
+                                $(this).addClass('active');
+                                $("#idTituloCard").html(datos_servicio.nombre);
+
+                            } else if (valor === "3") {
+                                $("#idTabla_form").load("{% url 'punto_geografico-home' 123 %}".replace("123", datos_servicio.id));
+                                $(this).addClass('active');
+                                $("#idTituloCard").html(datos_servicio.nombre);
+                            } else if (valor === "4") {
+                                $("#idTabla_form").load("{% url 'dimensiones-home' 123 %}".replace("123", datos_servicio.id));
+                                $(this).addClass('active');
+                                $("#idTituloCard").html(datos_servicio.nombre);
+                            } else {
+                                $("#idTabla_form").html("");
+                                $("#idTituloCard").html("");
+                            }
+                            $.notify(response.mensaje + " (" + response.datos.descripcion + ")", "success");
+                        }
+                    },
+                    error: function (response) {
+                        // $('.Contenedor').waitMe("hide");
+                        $.notify("Ocurrio algo inesperado", "error");
+
+                    }
+                });
+
+            });
+
+
+        });
+    </script>
+
+
+
+{% endblock %}

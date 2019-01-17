@@ -1,0 +1,56 @@
+<div class="dt-buttons" style="margin: 0.2em">
+    <button id="btnNuevo1" type="button" class="btn btn-info fa fa-file"></button>
+</div>
+<table id="tabla2" class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th style="width: 80%" scope="col">Texto</th>
+        <th scope="col" colspan="2">Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for objeto in object %}
+        <tr>
+            <td>{{ objeto.texto }}</td>
+            <td>
+                <button valor="{{ objeto.id }}" class='btnEditar1 btn btn-info btn-sm fa fa-pencil'></button>&nbsp;
+                <button valor="{{ objeto.id }}" class='btnEliminar1 btn btn-danger btn-sm fa fa-trash-o'></button>
+            </td>
+        </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+
+
+<script>
+    var idservicio = "{{ id_servicio }}";
+    var titulo = "Comentario";
+    var urlagregar_2 = "{% url 'comentario-agregar' 123 %}".replace("123", idservicio);
+    var modal = $("#Modal2");
+    $("#btnNuevo1").on("click", function () {
+        modal.find(".modal-body").load(urlagregar_2);
+        modal.modal('show');
+        $("#ModalLabel2").text("Nuevo " + titulo);
+        $("#Formulario2").attr('action', urlagregar_2);
+    });
+
+    $(".btnEditar1").on('click', function () {
+        var idobjet = ($(this).attr('valor'));
+        var urleditar_2 = "{% url 'comentario-editar' 123 %}".replace("123", idobjet);
+        var url1 = urleditar_2.replace('123',);
+        modal.find(".modal-body").load(url1);
+        modal.modal('show');
+        $("#Formulario2").attr('action', url1);
+        $("#ModalLabel2").text("Editando " + titulo);
+    });
+    $(".btnEliminar1").on('click', function () {
+        var idobjet = ($(this).attr('valor'));
+        var urleliminar_2 = "{% url 'comentario-eliminar' 123 %}".replace("123", idobjet);
+        var url1 = urleliminar_2.replace('123',);
+        modal.find(".modal-body").load(url1);
+        modal.modal('show');
+        $("#Formulario2").attr('action', url1);
+        $("#ModalLabel2").text("Eliminado " + titulo);
+    });
+</script>
