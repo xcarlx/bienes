@@ -5,8 +5,8 @@ media/
 db.sqlite3
 .DS_Store
 db.sqlite3
-bienes/settings.py
 .idea
 .idea/*
 .idea/
 static/
+settings.py
