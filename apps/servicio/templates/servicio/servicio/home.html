@@ -171,15 +171,15 @@
                 event.preventDefault();
                 var modal = $("#Modal2");
                 modal.modal('hide');
-                // $('.Contenedor').waitMe({
-                //     effect: 'ios',
-                //     text: '',
-                //     maxSize: '',
-                //     waitTime: -1,
-                //     textPos: 'vertical',
-                //     fontSize: '',
-                //     source: '',
-                // });
+                $('.content-page').waitMe({
+                    effect: 'ios',
+                    text: '',
+                    maxSize: '',
+                    waitTime: -1,
+                    textPos: 'vertical',
+                    fontSize: '',
+                    source: '',
+                });
                 var post_url = $(this).attr("action");
                 var request_method = $(this).attr("method");
                 var formData = new FormData($(this)[0]);
@@ -191,12 +191,12 @@
                     contentType: false,   // tell jQuery not to set contentType
                     success: function (response) {
                         if (typeof response.datos === 'undefined') {
-                            // $('.Contenedor').waitMe("hide");
+                            $('.content-page').waitMe("hide");
                             modal.modal('show');
                             modal.find(".modal-body").html(response);
                         }
                         else {
-                            // $('.Contenedor').waitMe("hide");
+                            $('.content-page').waitMe("hide");
 
                             if (valor === "0") {
                                 $("#idTabla_form").load("{% url 'videos-home' 123 %}".replace("123", datos_servicio.id));
@@ -228,7 +228,7 @@
                         }
                     },
                     error: function (response) {
-                        // $('.Contenedor').waitMe("hide");
+                        $('.content-page').waitMe("hide");
                         $.notify("Ocurrio algo inesperado", "error");
 
                     }

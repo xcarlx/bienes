@@ -83,7 +83,15 @@ DATABASES = {
         'PASSWORD': '123456',
         'HOST': '127.0.0.1',
         'PORT': '3306',
-    }
+    },
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'inmocasa$bienes',
+    #     'USER': 'inmocasa',
+    #     'PASSWORD': 'GrupoTecnologico1',
+    #     'HOST': 'inmocasa.mysql.pythonanywhere-services.com',
+    #     'PORT': '3306',
+    # }
 }
 
 # Password validation
@@ -121,7 +129,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "bienes/static"),
     # '/var/www/static/',
