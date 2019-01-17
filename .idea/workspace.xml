@@ -94,7 +94,7 @@
         <counts>
           <entry key="Django Console" value="221" />
           <entry key="css" value="113" />
-          <entry key="gitignore" value="11" />
+          <entry key="gitignore" value="15" />
           <entry key="html" value="7241" />
           <entry key="js" value="268" />
           <entry key="py" value="7249" />
@@ -106,7 +106,7 @@
           <entry key="CSS" value="113" />
           <entry key="HTML" value="7241" />
           <entry key="JavaScript" value="268" />
-          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="PLAIN_TEXT" value="23" />
           <entry key="Python" value="7470" />
         </counts>
       </usages-collector>
@@ -156,8 +156,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+            <state relative-caret-position="135">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -426,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547696109702</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="settings">
+      <created>1547696313501</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1547696313501</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -807,8 +814,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        <state relative-caret-position="135">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
