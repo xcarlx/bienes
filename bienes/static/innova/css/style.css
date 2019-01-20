@@ -89,7 +89,8 @@ hr {
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
     font-weight: 700;
-    color: #1f386e;
+    /*color: #1f386e;*/
+    color: #c41c00;
     text-transform: uppercase;
     letter-spacing: -1px;
 }
@@ -97,7 +98,8 @@ hr {
 #menu.navbar-default .navbar-nav > li > a {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    color: #1f386e;
+    /*color: #1f386e;*/
+    color: #c41c00;
     font-size: 14px;
     font-weight: 700;
     padding: 8px 2px;
@@ -110,7 +112,8 @@ hr {
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    color: #ce2a36 !important;
+    /*color: #ce2a36 !important;*/
+    color: #ff7043 !important;
     background-color: transparent;
 }
 
@@ -126,7 +129,8 @@ hr {
 #menu .phone span {
     font-size: 14px;
     display: block;
-    color: #1f386e;
+    /*color: #1f386e;*/
+    color: #c41c00;
 }
 
 .navbar-toggle {
@@ -179,7 +183,8 @@ hr {
 
 .btn-custom:hover, .btn-custom:focus, .btn-custom.focus, .btn-custom:active, .btn-custom.active {
     color: #fff;
-    background-color: #1f386e;
+    /*background-color: #1f386e;*/
+    background-color: #c41c00;
 }
 
 .btn:active, .btn.active {
@@ -241,7 +246,8 @@ header .intro-text {
 #get-touch {
     padding: 40px 0 30px;
     color: rgba(255, 255, 255, .7);
-    background: #1f386e;
+    /*background: #1f386e;*/
+    background: #c41c00;
 }
 
 #get-touch h3 {
@@ -258,7 +264,8 @@ header .intro-text {
 }
 
 #get-touch .btn-custom:hover {
-    color: #1f386e;
+    /*color: #1f386e;*/
+    color: #c41c00;
     background: #fff;
     border: 2px solid #fff;
 }
@@ -301,7 +308,8 @@ header .intro-text {
 #about .about-text li:before {
     content: '\f00c';
     font-family: 'FontAwesome';
-    color: #1f386e;
+    /*color: #1f386e;*/
+    color: #c41c00;
     font-size: 11px;
     font-weight: 300;
     padding-right: 8px;
@@ -449,7 +457,8 @@ header .intro-text {
 /* Contact Section */
 #contact {
     padding: 100px 0 60px 0;
-    background: #1f386e;
+    /*background: #1f386e;*/
+    background: #c41c00;
     color: rgba(255, 255, 255, .65);
 }
 
@@ -494,7 +503,8 @@ header .intro-text {
 }
 
 #contact .btn-custom:hover {
-    color: #1f386e;
+    /*color: #1f386e;*/
+    color: #c41c00;
     background: #fff;
 }
 
@@ -590,7 +600,8 @@ label {
 }
 
 #footer a {
-    color: #1f386e;
+    /*color: #1f386e;*/
+    color: #c41c00;
 }
 
 #footer a:hover {

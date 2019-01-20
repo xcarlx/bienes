@@ -1,0 +1,69 @@
+{% extends "innova/page.html" %}
+{% load static %}
+{% block style_master %}
+    {#    <link rel="stylesheet" type="text/css" href="{% static 'css/precing.css' %}">#}
+    <style>
+        label {
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+
+        }
+
+        .font-combo-16 {
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            padding: 0.1em;
+            height: 40px;
+            font-weight: bold;
+
+        }
+
+        .font-label-14 {
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0.1em;
+            font-size: 14px;
+        }
+
+        .font-label-16 {
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0.1em;
+            font-size: 16px;
+        }
+
+        .font-label-18 {
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0.1em;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    </style>
+{% endblock %}
+{% block cuerpo_master %}
+    <div class="section-title">
+        {# TITULO #}
+        <h2>Servicios</h2>
+    </div>
+    <div class="container">
+        {{ tipo_servicio }}
+        <br>
+        <div class="list-group" style="margin: 0.4em">
+            <div id="idListaServicio">
+
+            </div>
+        </div>
+
+
+    </div>
+
+{% endblock %}
+
+{% block script_master %}
+    <script>
+        $("#id_tipo_inmueble").change(function (e) {
+            var tipo = $(this).val() === "DE" ? 2 : $(this).val() === "TE" ? 0 : 1;
+            var url = "{% url 'lista-servicio-lista' '123' %}".replace("123", tipo);
+            $("#idListaServicio").load(url);
+        }).change();
+    </script>
+{% endblock %}

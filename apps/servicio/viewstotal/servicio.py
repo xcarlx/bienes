@@ -49,6 +49,7 @@ class ListaObject(LoginRequiredMixin, View):
                     "id": object.id,
                     "nombre": object.nombre,
                     "tipo_inmueble": object.get_tipo_inmueble_display(),
+                    "monto_venta": object.monto_venta,
                 }
                 lista.append(dict)
             object = {

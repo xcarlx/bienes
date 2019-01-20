@@ -1,0 +1,59 @@
+{% for servicio in object_list %}
+
+
+    <a href="#" class="list-group-item">
+        <h3 class="list-group-item-heading">{{ servicio.nombre }}</h3>
+        <div class="row">
+            <div class="col-md-3">
+                {% for fotos in servicio.foto_set.all|slice:":1" %}
+                    <div class="service-media">
+
+                        <img src="{{ MEDIA_URL }}{{ fotos.imagen }}" alt="Responsive image"
+                             style="height: 150px; width: 100%;" class="img-responsive img-thumbnail"></div>
+                    </div>
+                {% endfor %}
+            <div class="col-md-6">
+                <div class="service-desc">
+                    <p style="font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+                        {{ servicio.descripcion }}
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <label for="" class="font-label-16">Precio:
+                    </label>
+                </div>
+                <div class="row">
+                    <label for="" class="font-label-18">
+                        {{ servicio.monto_venta }}
+                    </label>
+                </div>
+                <div class="row">
+                    <label for="" class="font-label-16">Contacto:
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label for="" class="font-label-18">
+                        {{ servicio.proveedor }}
+                    </label>
+                </div>
+                <div class="row">
+                    <label for="" class="font-label-14">
+                        {{ servicio.proveedor.telefono }}
+
+                    </label>
+                </div>
+                <div class="row">
+                    <label for="" class="font-label-14">
+                        {{ servicio.proveedor.correo }}
+
+                    </label>
+                </div>
+            </div>
+        </div>
+    </a>
+{% endfor %}
+
+

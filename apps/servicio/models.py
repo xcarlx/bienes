@@ -50,6 +50,8 @@ class Servicio(models.Model):
     inscrito_registro_publico = models.BooleanField(default=True)
     acabados = models.BooleanField(default=True)
     proveedor = models.ForeignKey('Persona', related_name='+', on_delete=models.CASCADE)
+    monto_venta = models.DecimalField(max_digits=14, decimal_places=2)
+    monto_vendido = models.DecimalField(max_digits=14, decimal_places=2, blank=True, null=True)
     cliente = models.ForeignKey('Persona', blank=True, null=True, on_delete=models.CASCADE)
     fpublicacion = models.DateTimeField(auto_now_add=True)
     fventa = models.DateField(blank=True, null=True)

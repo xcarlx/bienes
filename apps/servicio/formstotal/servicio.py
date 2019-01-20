@@ -8,7 +8,7 @@ class ServicioForm(forms.ModelForm):
         model = Object
         fields = (
             'nombre', 'tipo_inmueble', 'proveedor', 'prioridad', 'descripcion', 'proyeccion', 'acabados',
-            'inscrito_registro_publico')
+            'inscrito_registro_publico', 'monto_venta')
         widgets = {
             "descripcion": forms.Textarea(attrs={'rows': 4, 'cols': 15}),
             "proyeccion": forms.Textarea(attrs={'rows': 4, 'cols': 15}),
