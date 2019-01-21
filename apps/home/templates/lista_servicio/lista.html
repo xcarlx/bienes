@@ -1,13 +1,10 @@
 {% for servicio in object_list %}
-
-
     <a href="#" class="list-group-item">
         <h3 class="list-group-item-heading">{{ servicio.nombre }}</h3>
         <div class="row">
             <div class="col-md-3">
                 {% for fotos in servicio.foto_set.all|slice:":1" %}
                     <div class="service-media">
-
                         <img src="{{ MEDIA_URL }}{{ fotos.imagen }}" alt="Responsive image"
                              style="height: 150px; width: 100%;" class="img-responsive img-thumbnail"></div>
                     </div>
@@ -27,7 +24,7 @@
                     </div>
                     <div class="row">
                         <label for="" class="font-label-18">
-                            {{ servicio.monto_venta }}
+                            S/ {{ servicio.monto_venta }}
                         </label>
                     </div>
                     <div class="row">

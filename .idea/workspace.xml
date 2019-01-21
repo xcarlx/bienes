@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48963713-2568-4ddd-aecb-66d3dc814528" name="Default Changelist" comment="settings">
-      <change afterPath="$PROJECT_DIR$/apps/home/formstotal/tipo_servicio.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/home/templates/lista_servicio/home-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/home/templates/lista_servicio/lista.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/home/viewstotal/lista_servicio.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/servicio/migrations/0002_auto_20190119_1825.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bienes/templates/innova/page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="48963713-2568-4ddd-aecb-66d3dc814528" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/home/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/servicio/formstotal/servicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/servicio/formstotal/servicio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/templates/lista_servicio/lista.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/lista_servicio/lista.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/viewstotal/inicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/viewstotal/inicio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/viewstotal/lista_servicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/viewstotal/lista_servicio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/servicio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/servicio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/servicio/templates/servicio/servicio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/servicio/templates/servicio/servicio/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/servicio/viewstotal/servicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/servicio/viewstotal/servicio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bienes/static/innova/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/bienes/static/innova/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bienes/templates/innova/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bienes/templates/innova/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,15 +52,15 @@
     <session id="362637656">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="8" />
           <entry key="project.open.time.6" value="7" />
-          <entry key="project.open.time.7" value="3" />
+          <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.opened" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -78,13 +68,13 @@
           <entry key="css" value="21" />
           <entry key="gitignore" value="4" />
           <entry key="home_principal" value="2" />
-          <entry key="html" value="136" />
+          <entry key="html" value="143" />
           <entry key="jpg" value="13" />
           <entry key="js" value="43" />
           <entry key="json" value="2" />
           <entry key="php" value="3" />
           <entry key="png" value="3" />
-          <entry key="py" value="173" />
+          <entry key="py" value="177" />
           <entry key="rnc" value="1" />
           <entry key="scss" value="1" />
           <entry key="sql" value="1" />
@@ -95,12 +85,12 @@
         <counts>
           <entry key="CSS" value="21" />
           <entry key="Database Element" value="2" />
-          <entry key="HTML" value="136" />
+          <entry key="HTML" value="143" />
           <entry key="Image" value="16" />
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="43" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="173" />
+          <entry key="Python" value="177" />
           <entry key="RNG Compact" value="1" />
           <entry key="SCSS" value="1" />
           <entry key="Scratch" value="1" />
@@ -111,19 +101,19 @@
           <entry key="Django Console" value="231" />
           <entry key="css" value="136" />
           <entry key="gitignore" value="39" />
-          <entry key="html" value="9408" />
+          <entry key="html" value="9453" />
           <entry key="js" value="268" />
-          <entry key="py" value="8086" />
+          <entry key="py" value="8130" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="136" />
-          <entry key="HTML" value="9408" />
+          <entry key="HTML" value="9453" />
           <entry key="JavaScript" value="268" />
           <entry key="PLAIN_TEXT" value="47" />
-          <entry key="Python" value="8317" />
+          <entry key="Python" value="8361" />
         </counts>
       </usages-collector>
     </session>
@@ -131,32 +121,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bienes/templates/innova/page.html">
+        <entry file="file://$PROJECT_DIR$/apps/servicio/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/home/templates/lista_servicio/lista.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#a#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="523">
+              <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -164,42 +132,49 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/home/viewstotal/lista_servicio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="285">
+              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
-                <marker date="1547964124050" expanded="true" signature="163:168" ph="..." />
-                <marker date="1547964124050" expanded="true" signature="620:625" ph="..." />
+                <marker date="1548015256648" expanded="true" signature="163:168" ph="..." />
+                <marker date="1548015256648" expanded="true" signature="620:625" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/servicio/models.py">
+        <entry file="file://$PROJECT_DIR$/apps/home/viewstotal/principal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="100" column="9" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/home/templates/lista_servicio/home-list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="894">
-              <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/home/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="94" selection-start-line="32" selection-start-column="94" selection-end-line="32" selection-end-column="114" />
+            <state relative-caret-position="-543">
+              <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
               <folding>
-                <element signature="e#630#658#0" expanded="true" />
+                <element signature="e#0#57#0" expanded="true" />
+                <marker date="1547658509180" expanded="true" signature="569:574" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/home/viewstotal/inicio.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/home/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="653">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
+              <folding>
+                <element signature="n#block#2;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -293,21 +268,21 @@
         <option value="$PROJECT_DIR$/bienes/settings.py" />
         <option value="$PROJECT_DIR$/apps/servicio/templates/servicio/comentario/home.html" />
         <option value="$PROJECT_DIR$/bienes/static/innova/css/style.css" />
-        <option value="$PROJECT_DIR$/apps/home/viewstotal/inicio.py" />
         <option value="$PROJECT_DIR$/bienes/templates/innova/index.html" />
-        <option value="$PROJECT_DIR$/apps/servicio/models.py" />
         <option value="$PROJECT_DIR$/apps/servicio/formstotal/servicio.py" />
         <option value="$PROJECT_DIR$/apps/servicio/viewstotal/servicio.py" />
         <option value="$PROJECT_DIR$/apps/servicio/templates/servicio/servicio/home.html" />
         <option value="$PROJECT_DIR$/apps/home/static/css/precing.css" />
         <option value="$PROJECT_DIR$/apps/home/formstotal/tipo_servicio.py" />
-        <option value="$PROJECT_DIR$/apps/home/templates/home.html" />
         <option value="$PROJECT_DIR$/bienes/templates/innova/page.html" />
         <option value="$PROJECT_DIR$/apps/home/urls.py" />
         <option value="$PROJECT_DIR$/apps/home/templates/lista_servicio/home-list.html" />
-        <option value="$PROJECT_DIR$/apps/home/viewstotal/lista_servicio.py" />
-        <option value="$PROJECT_DIR$/apps/home/templates/lista_servicio/lista.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/apps/home/templates/lista_servicio/lista.html" />
+        <option value="$PROJECT_DIR$/apps/servicio/models.py" />
+        <option value="$PROJECT_DIR$/apps/home/viewstotal/lista_servicio.py" />
+        <option value="$PROJECT_DIR$/apps/home/viewstotal/inicio.py" />
+        <option value="$PROJECT_DIR$/apps/home/templates/home.html" />
       </list>
     </option>
   </component>
@@ -343,56 +318,43 @@
             <path>
               <item name="bienes" type="b2602c69:ProjectViewProjectNode" />
               <item name="bienes" type="462c0819:PsiDirectoryNode" />
-              <item name="bienes" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bienes" type="b2602c69:ProjectViewProjectNode" />
               <item name="bienes" type="462c0819:PsiDirectoryNode" />
-              <item name="bienes" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bienes" type="b2602c69:ProjectViewProjectNode" />
               <item name="bienes" type="462c0819:PsiDirectoryNode" />
-              <item name="bienes" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bienes" type="b2602c69:ProjectViewProjectNode" />
               <item name="bienes" type="462c0819:PsiDirectoryNode" />
-              <item name="bienes" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="waitme" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bienes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bienes" type="462c0819:PsiDirectoryNode" />
-              <item name="bienes" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bienes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bienes" type="462c0819:PsiDirectoryNode" />
-              <item name="bienes" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="pike" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bienes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bienes" type="462c0819:PsiDirectoryNode" />
-              <item name="bienes" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="pike" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="viewstotal" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="bienes" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -548,7 +510,21 @@
       <option name="project" value="LOCAL" />
       <updated>1547743183237</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="settings">
+      <created>1547965044056</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1547965044056</updated>
+    </task>
+    <task id="LOCAL-00013" summary="settings">
+      <created>1547965465891</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1547965465891</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -564,7 +540,7 @@
     <frame x="0" y="23" width="1920" height="1093" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4993804" visible="true" weight="0.3226837" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4993804" visible="true" weight="0.3258786" />
       <window_info id="Structure" order="1" sideWeight="0.5006196" side_tool="true" weight="0.27635783" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32924336" />
@@ -601,17 +577,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="settings" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/servicio/viewstotal/punto_geografico.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="85" column="87" selection-start-line="85" selection-start-column="87" selection-end-line="85" selection-end-column="87" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bienes/static/pike/assets/data/dataTablesObjects.txt" />
     <entry file="file://$PROJECT_DIR$/bienes/static/pike/assets/images/2b8ce5d5-canon-powershot-g3-x-sample-images-1.jpg" />
     <entry file="file://$PROJECT_DIR$/bienes/static/pike/assets/images/sample-image-1.jpg" />
     <entry file="file://$PROJECT_DIR$/bienes/static/pike/assets/plugins/fancybox/iframe.html">
@@ -650,22 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" selection-end-line="139" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/home/templates/principal/principal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/home/viewstotal/principal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="17" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-            <marker date="1547658509180" expanded="true" signature="569:574" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -752,34 +701,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/home/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/home/viewstotal/inicio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="90" lean-forward="true" selection-start-line="18" selection-start-column="90" selection-end-line="18" selection-end-column="90" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bienes/templates/innova/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bienes/static/innova/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/servicio/templates/servicio/servicio/home.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -792,9 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -834,17 +754,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bienes/urls.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/home/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#a#1;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/servicio/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -895,20 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/home/templates/lista_servicio/home-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="894">
-          <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bienes/templates/innova/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/block.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="678">
@@ -916,29 +811,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/servicio/models.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="100" column="9" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="9" />
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/home/viewstotal/lista_servicio.py">
+    <entry file="file://$PROJECT_DIR$/bienes/templates/innova/page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-            <marker date="1547964124050" expanded="true" signature="163:168" ph="..." />
-            <marker date="1547964124050" expanded="true" signature="620:625" ph="..." />
-          </folding>
+        <state relative-caret-position="1455">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bienes/templates/innova/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3885">
+          <caret line="259" column="46" selection-start-line="259" selection-start-column="46" selection-end-line="259" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/home/templates/administracion.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/home/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/home/templates/principal/principal.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/home/templates/lista_servicio/home-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/home/templates/lista_servicio/lista.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="390">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#a#0;n#!!top" expanded="true" />
@@ -946,10 +859,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/../entorno/lib/python3.7/site-packages/django/views/generic/list.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="260">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/servicio/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/home/viewstotal/lista_servicio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+            <marker date="1548015256648" expanded="true" signature="163:168" ph="..." />
+            <marker date="1548015256648" expanded="true" signature="620:625" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/home/viewstotal/principal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-543">
+          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+            <marker date="1547658509180" expanded="true" signature="569:574" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/home/viewstotal/inicio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/home/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="n#block#2;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

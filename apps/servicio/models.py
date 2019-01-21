@@ -64,6 +64,9 @@ class Servicio(models.Model):
     def get_absolute_url(self):
         return reverse('servicio-success', kwargs={'pk': self.pk})
 
+    class Meta:
+        ordering = ['-id']
+
 
 class Comentario(models.Model):
     texto = models.TextField()

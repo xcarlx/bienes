@@ -17,9 +17,10 @@ class HomeTemplate(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(HomeTemplate, self).get_context_data(**kwargs)
         context['principal'] = Principal.objects.filter(estado=True).order_by("id").last()
-        foto = Foto.objects.filter(orden=1).order_by("-servicio__id")[:6]
+        foto = Foto.objects.filter(orden=1).order_by("-servicio__id")[:9]
         context['foto1'] = foto[:3]
         context['foto2'] = foto[3:6]
+        context['foto3'] = foto[6:9]
         return context
 
 
