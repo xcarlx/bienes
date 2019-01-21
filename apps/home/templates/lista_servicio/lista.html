@@ -82,11 +82,15 @@
 <script>
 
     $(".pagination li a").each(function (index) {
+
         var url = $(this).attr("href").replace("123", tipo);
         $(this).attr("href", url);
+
+
     });
-    $("a").click(function (event) {
+    $(".pagination li a").click(function (event) {
         event.preventDefault();
+
         var url = $(this).attr("href");
         $("#idListaServicio").load(url);
 
