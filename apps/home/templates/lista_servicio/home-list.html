@@ -61,7 +61,7 @@
 {% block script_master %}
     <script>
         $("#id_tipo_inmueble").change(function (e) {
-            var tipo = $(this).val() === "DE" ? 2 : $(this).val() === "TE" ? 0 : 1;
+            tipo = $(this).val() === "DE" ? 2 : $(this).val() === "TE" ? 0 : 1;
             var url = "{% url 'lista-servicio-lista' '123' %}".replace("123", tipo);
             $("#idListaServicio").load(url);
         }).change();

@@ -21,7 +21,12 @@ class ListaServicio(ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(ListaServicio, self).get_context_data(**kwargs)
-        tipo = "TE" if self.kwargs['tipo'] == 0 else "CA" if self.kwargs['tipo'] == 1 else "DE"
-        context['servicio_list'] = Servicio.objects.filter(tipo_inmueble=tipo)
-        context['object_list'] = Servicio.objects.filter(tipo_inmueble=tipo)
+        # tipo = "TE" if self.kwargs['tipo'] == 0 else "CA" if self.kwargs['tipo'] == 1 else "DE"
+        # context['servicio_list'] = Servicio.objects.filter(tipo_inmueble=tipo)
+        # context['object_list'] = Servicio.objects.filter(tipo_inmueble=tipo)
         return context
+
+    def get_queryset(self):
+        tipo = "TE" if self.kwargs['tipo'] == 0 else "CA" if self.kwargs['tipo'] == 1 else "DE"
+        queryset = Servicio.objects.filter(tipo_inmueble=tipo)
+        return queryset
