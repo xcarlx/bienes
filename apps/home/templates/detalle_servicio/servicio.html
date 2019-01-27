@@ -1,0 +1,159 @@
+{% extends 'innova/page.html' %}
+{% block style_master %}
+    <style>
+        .fila {
+            margin: 0.5em;
+            padding: 0.5em;
+        }
+
+        label {
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+
+        }
+
+        .font-combo-16 {
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            padding: 0.1em;
+            height: 40px;
+            font-weight: bold;
+
+        }
+
+        .font-label-14 {
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0.1em;
+            font-size: 14px;
+        }
+
+        .font-label-16 {
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0.1em;
+            font-size: 16px;
+        }
+
+        .font-label-18 {
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0.1em;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+    </style>
+{% endblock %}
+
+{% block cuerpo_master %}
+
+    <div class="row fila">
+        <h1>
+            {{ object }}
+        </h1>
+    </div>
+    <div class="row fila">
+        <div class="col-md-12">
+            <img class="img-responsive img-thumbnail" alt="Responsive image" style="width: 100%; height: auto;">
+        </div>
+    </div>
+    <div class="row fila">
+        <div class="col-md-5">
+            <div style="padding: 0.8em">
+                <p>
+                    {{ object.descripcion }}
+                </p>
+            </div>
+        </div>
+        <div class="col-md-7" style="border-radius: 4px; border: 0.5px solid #cecece;">
+            <div style=" padding: 2em!important; margin: 0!important;">
+                <div class="row">
+                    <label for="" class="font-label-16">Precio:
+                    </label>
+                </div>
+                <div class="row">
+                    <label for="" class="font-label-18">
+                        S/ {{ object.monto_soles }} - $ {{ object.monto_dolares }}
+                    </label>
+                </div>
+                <div class="row">
+                    <label for="" class="font-label-16">
+                        Contacto:
+                    </label>
+                </div>
+                <div class="row">
+                    <label for="" class="font-label-18">
+                        {{ object.proveedor }}
+                    </label>
+                </div>
+                <div class="row">
+                    <label for="" class="font-label-14">
+                        <strong>Celular : </strong>&nbsp;{{ object.proveedor.telefono }}
+
+                    </label>
+                </div>
+                <div class="row">
+                    <label for="" class="font-label-14">
+                        <strong>E-mail &nbsp;: </strong>&nbsp; {{ object.proveedor.correo }}
+                    </label>
+                </div>
+                <div class="row">
+                    <label for="" class="font-label-14">
+                        <strong>Referencia: </strong>&nbsp; {{ object.referencia }} asldkmaskl dmaskldm asklmd klasmd
+                        klamsldk m
+                    </label>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12" style="margin: 0; padding: 0">
+                        <label for="" class="font-label-14">
+                            <strong>Ciudad: </strong>&nbsp; {{ object.ciudad|default_if_none:"Sin Ciudad" }}
+                        </label>
+                    </div>
+                    <div class="col-md-6 col-xs-12" style="margin: 0; padding: 0">
+                        <label for="" class="font-label-14">
+                            <strong>Lugar: </strong>&nbsp; {{ object.lugar|default_if_none:"Sin Lugar" }}
+                        </label>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <label for="" class="font-label-14">
+                        <strong>Dirección: </strong>&nbsp; {{ object.direccion }}
+                    </label>
+                </div>
+                <div class="row">
+                    <label for="" class="font-label-14">
+                        <strong>Registros públicos: </strong>&nbsp;
+                        {% if object.inscrito_registro_publico %}
+                            Si
+                        {% else %}
+                            No
+                        {% endif %}
+                    </label>
+                </div>
+                {% if object.tipo_inmueble == "CA" or object.tipo_inmueble == "DE" %}
+                    <div class="row">
+                        <label for="" class="font-label-14">
+                            <strong>Acabados: </strong>&nbsp;
+                            {% if object.acabados %}
+                                Si
+                            {% else %}
+                                No
+                            {% endif %}
+                        </label>
+                    </div>
+                {% endif %}
+
+
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block script_master %}
+
+{% endblock %}

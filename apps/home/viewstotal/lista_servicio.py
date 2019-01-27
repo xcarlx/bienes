@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 
 from ...servicio.models import Servicio
 from ..formstotal import tipo_servicio
@@ -17,7 +17,7 @@ class Home(TemplateView):
 class ListaServicio(ListView):
     template_name = "lista_servicio/lista.html"
     model = Servicio
-    paginate_by = 8
+    paginate_by = 10
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(ListaServicio, self).get_context_data(**kwargs)
@@ -30,3 +30,8 @@ class ListaServicio(ListView):
         tipo = "TE" if self.kwargs['tipo'] == 0 else "CA" if self.kwargs['tipo'] == 1 else "DE"
         queryset = Servicio.objects.filter(tipo_inmueble=tipo)
         return queryset
+
+
+class DetalleServicio(DetailView):
+    template_name = "detalle_servicio/servicio.html"
+    model = Servicio

@@ -37,6 +37,15 @@
             font-weight: bold;
         }
 
+        p {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            word-wrap: break-word;
+            text-align: justify;
+        }
+
     </style>
 {% endblock %}
 {% block cuerpo_master %}

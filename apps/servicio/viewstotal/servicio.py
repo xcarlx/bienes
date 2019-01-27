@@ -7,7 +7,7 @@ from django.views.generic import TemplateView, UpdateView, DeleteView, CreateVie
 from django.views.generic.base import View
 
 from ..models import Servicio as Object
-from ..formstotal.servicio import ServicioForm as Formulario
+from ..formstotal.servicio import ServicioForm as Formulario, ServicioEditarForm
 
 
 class Home(LoginRequiredMixin, TemplateView):
@@ -49,7 +49,8 @@ class ListaObject(LoginRequiredMixin, View):
                     "id": object.id,
                     "nombre": object.nombre,
                     "tipo_inmueble": object.get_tipo_inmueble_display(),
-                    "monto_venta": object.monto_venta,
+                    "monto_soles": object.monto_soles,
+                    "monto_dolares": object.monto_dolares
                 }
                 lista.append(dict)
             object = {
@@ -97,7 +98,7 @@ class CrearObjet(LoginRequiredMixin, CreateView):
 class UpdateObject(LoginRequiredMixin, UpdateView):
     login_url = 'login'
     model = Object
-    form_class = Formulario
+    form_class = ServicioEditarForm
     template_name = "servicio/servicio/formulario.html"
 
     def form_valid(self, form):

@@ -1,5 +1,5 @@
 {% for servicio in object_list %}
-    <a href="#" class="list-group-item">
+    <a href="{% url 'detalle-servicio' servicio.id %}" class="list-group-item">
         <h3 class="list-group-item-heading">{{ servicio.nombre }}</h3>
         <div class="row">
             <div class="col-md-3">
@@ -24,11 +24,12 @@
                     </div>
                     <div class="row">
                         <label for="" class="font-label-18">
-                            S/ {{ servicio.monto_venta }}
+                            S/ {{ servicio.monto_soles }} - $ {{ servicio.monto_dolares }}
                         </label>
                     </div>
                     <div class="row">
-                        <label for="" class="font-label-16">Contacto:
+                        <label for="" class="font-label-16">
+                            Contacto:
                         </label>
                     </div>
 
@@ -39,13 +40,13 @@
                     </div>
                     <div class="row">
                         <label for="" class="font-label-14">
-                            {{ servicio.proveedor.telefono }}
+                            <strong>Celular : </strong>&nbsp;{{ servicio.proveedor.telefono }}
 
                         </label>
                     </div>
                     <div class="row">
                         <label for="" class="font-label-14">
-                            {{ servicio.proveedor.correo }}
+                            <strong>E-mail &nbsp;: </strong>&nbsp; {{ servicio.proveedor.correo }}
 
                         </label>
                     </div>
@@ -54,29 +55,36 @@
         </div>
     </a>
 {% endfor %}
+<div class="row">
+
+    <div class="text-center">
 
 
-{% if is_paginated %}
-    <ul class="pagination">
-        {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
-        {% else %}
-            <li class="disabled"><span>&laquo;</span></li>
+        {% if is_paginated %}
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                    <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                    <li class="disabled"><span>&laquo;</span></li>
+                {% endif %}
+                {% for i in paginator.page_range %}
+                    {% if page_obj.number == i %}
+                        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                    {% else %}
+                        <li><a href="{% url 'lista-servicio-lista' '123' %}?page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                    <li>
+                        <a href="{% url 'lista-servicio-lista' '123' %}?page={{ page_obj.next_page_number }}">&raquo;</a>
+                    </li>
+                {% else %}
+                    <li class="disabled"><span>&raquo;</span></li>
+                {% endif %}
+            </ul>
         {% endif %}
-        {% for i in paginator.page_range %}
-            {% if page_obj.number == i %}
-                <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-            {% else %}
-                <li><a href="{% url 'lista-servicio-lista' '123' %}?page={{ i }}">{{ i }}</a></li>
-            {% endif %}
-        {% endfor %}
-        {% if page_obj.has_next %}
-            <li><a href="{% url 'lista-servicio-lista' '123' %}?page={{ page_obj.next_page_number }}">&raquo;</a></li>
-        {% else %}
-            <li class="disabled"><span>&raquo;</span></li>
-        {% endif %}
-    </ul>
-{% endif %}
+    </div>
+</div>
 
 
 <script>

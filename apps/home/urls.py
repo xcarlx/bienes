@@ -32,4 +32,7 @@ urlpatterns = [
     path('servicio/home/<int:tipo>/lista/', lista_servicio.Home.as_view(), name='lista-servicio-home'),
     path('servicio/lista/servicio/<int:tipo>/', lista_servicio.ListaServicio.as_view(), name='lista-servicio-lista'),
 
+    path('detalle_servicio/servicio/<int:pk>/', lista_servicio.DetalleServicio.as_view(),
+         name='detalle-servicio'),
+
 ]
