@@ -65,7 +65,7 @@
         {% endfor %}
     </div>
     <div class="row">
-        {% for fotos in foto2 %}
+        {% for servicio in servicio1 %}
             <div class="col-md-4">
                 <a href="{% url 'detalle-servicio' servicio.id %}" title="{{ servicio }}"
                    data-lightbox-gallery="gallery1">
@@ -82,7 +82,7 @@
         {% endfor %}
     </div>
     <div class="row">
-        {% for fotos in foto3 %}
+        {% for servicio in servicio2 %}
             <div class="col-md-4">
                 <a href="{% url 'detalle-servicio' servicio.id %}" title="{{ servicio }}"
                    data-lightbox-gallery="gallery1">
