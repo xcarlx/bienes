@@ -1,3 +1,5 @@
+from django.utils.decorators import method_decorator
+from django.views.decorators.clickjacking import xframe_options_exempt, xframe_options_deny, xframe_options_sameorigin
 from django.views.generic import TemplateView, ListView, DetailView
 
 from ...servicio.models import Servicio
@@ -30,6 +32,9 @@ class ListaServicio(ListView):
         tipo = "TE" if self.kwargs['tipo'] == 0 else "CA" if self.kwargs['tipo'] == 1 else "DE"
         queryset = Servicio.objects.filter(tipo_inmueble=tipo)
         return queryset
+
+
+# method_decorator(xframe_options_exempt, name='dispath')
 
 
 class DetalleServicio(DetailView):
