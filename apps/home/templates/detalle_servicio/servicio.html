@@ -49,6 +49,11 @@
             height: 100%;
         }
 
+        iframe {
+            max-width: 100%;
+            height: auto;
+        }
+
     </style>
 {% endblock %}
 
@@ -69,7 +74,9 @@
                             <div class="hover-text">
                                 <h4>{{ object }}</h4>
                             </div>
-                            <img src="{{ MEDIA_URL }}{{ fotos.imagen }}" class="img-responsive" alt="{{ object }}"> </a>
+                            <img src="{{ MEDIA_URL }}{{ fotos.imagen }}" class="img-responsive" alt="Responsive image"
+                                 style="height: 450px; width: 100%">
+                        </a>
                         </div>
                     {% else %}
                         <div class="hover-bg hidden"><a href="{{ MEDIA_URL }}{{ fotos.imagen }}" title="{{ object }}"
