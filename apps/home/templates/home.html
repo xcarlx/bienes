@@ -67,9 +67,9 @@
     <div class="row">
         {% for servicio in servicio1 %}
             <div class="col-md-4">
-                <a href="{% url 'detalle-servicio' servicio.id %}" title="{{ servicio }}"
+                <a href="{% url 'detalle-servicio' servicio.id %}" title="{{ servicio1 }}"
                    data-lightbox-gallery="gallery1">
-                    {% for foto in servicio1.foto_set.all|slice:":1" %}
+                    {% for foto in servicio.foto_set.all|slice:":1" %}
                         <div class="service-media"><img src="{{ MEDIA_URL }}{{ foto.imagen }}" alt=" "></div>
                     {% endfor %}
 
@@ -86,7 +86,7 @@
             <div class="col-md-4">
                 <a href="{% url 'detalle-servicio' servicio.id %}" title="{{ servicio }}"
                    data-lightbox-gallery="gallery1">
-                    {% for foto in servicio2.foto_set.all|slice:":1" %}
+                    {% for foto in servicio.foto_set.all|slice:":1" %}
                         <div class="service-media"><img src="{{ MEDIA_URL }}{{ foto.imagen }}" alt=" "></div>
                     {% endfor %}
 
