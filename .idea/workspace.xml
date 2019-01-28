@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48963713-2568-4ddd-aecb-66d3dc814528" name="Default Changelist" comment="settings">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/templates/detalle_servicio/servicio.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/detalle_servicio/servicio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/viewstotal/lista_servicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/viewstotal/lista_servicio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/servicio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/servicio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/servicio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/servicio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/servicio/viewstotal/videos.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/servicio/viewstotal/videos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bienes/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bienes/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bienes/templates/innova/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bienes/templates/innova/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="48963713-2568-4ddd-aecb-66d3dc814528" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +59,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="22" />
-          <entry key="gitignore" value="4" />
+          <entry key="gitignore" value="5" />
           <entry key="home_principal" value="2" />
           <entry key="html" value="168" />
           <entry key="jpg" value="13" />
@@ -92,7 +82,7 @@
           <entry key="Image" value="16" />
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="44" />
-          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="PLAIN_TEXT" value="9" />
           <entry key="Python" value="201" />
           <entry key="RNG Compact" value="1" />
           <entry key="SCSS" value="1" />
@@ -126,11 +116,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/home/templates/detalle_servicio/servicio.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="210" column="23" selection-start-line="210" selection-start-column="23" selection-end-line="210" selection-end-column="23" />
+            <state relative-caret-position="531">
+              <caret line="209" column="33" selection-start-line="209" selection-start-column="31" selection-end-line="209" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -726,7 +725,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548646548325</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="settings">
+      <created>1548652743565</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1548652743565</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -929,13 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/home/templates/administracion.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1124,8 +1123,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/home/templates/detalle_servicio/servicio.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="210" column="23" selection-start-line="210" selection-start-column="23" selection-end-line="210" selection-end-column="23" />
+        <state relative-caret-position="531">
+          <caret line="209" column="33" selection-start-line="209" selection-start-column="31" selection-end-line="209" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
         </state>
       </provider>
     </entry>
