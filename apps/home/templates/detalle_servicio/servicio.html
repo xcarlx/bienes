@@ -153,17 +153,23 @@
                     </label>
                 </div>
                 <div class="row">
-                    <label for="" class="font-label-14">
-                        <strong>Registros públicos: </strong>&nbsp;
-                        {% if object.inscrito_registro_publico %}
-                            Si
-                        {% else %}
-                            No
-                        {% endif %}
-                    </label>
-                </div>
-                {% if object.tipo_inmueble == "CA" or object.tipo_inmueble == "DE" %}
-                    <div class="row">
+                    <div class="col-md-6 col-xs-12" style="margin: 0; padding: 0">
+                        <label for="" class="font-label-14">
+                            <strong>Registros públicos: </strong>&nbsp;
+                            {% if object.inscrito_registro_publico %}
+                                Si
+                            {% else %}
+                                No
+                            {% endif %}
+                        </label>
+                    </div>
+                    <div class="col-md-6 col-xs-12" style="margin: 0; padding: 0">
+                        <label for="" class="font-label-14">
+                            <strong>Lugar: </strong>&nbsp; {{ object.lugar|default_if_none:"Sin Lugar" }}
+                        </label>
+                    </div>
+                
+                    {% if object.tipo_inmueble == "CA" or object.tipo_inmueble == "DE" %}
                         <label for="" class="font-label-14">
                             <strong>Acabados: </strong>&nbsp;
                             {% if object.acabados %}
@@ -172,8 +178,8 @@
                                 No
                             {% endif %}
                         </label>
-                    </div>
-                {% endif %}
+                    {% endif %}
+                </div>
 
 
             </div>
