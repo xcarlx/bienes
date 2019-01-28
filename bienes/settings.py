@@ -24,7 +24,7 @@ SECRET_KEY = 'r_%)2gkfae(a*9$my6q&2^zjct$-%t1&%(^_0o*e)h4a=%@&86'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-X_FRAME_OPTIONS = 'ALLOW-FROM'
+X_FRAME_OPTIONS = 'ALLOW-FROM http://127.0.0.1:8000/'
 
 ROOT_URLCONF = 'bienes.urls'
 

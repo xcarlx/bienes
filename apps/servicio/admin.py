@@ -58,9 +58,9 @@ class FotoAdmin(admin.ModelAdmin):
 admin.site.register(Foto, FotoAdmin)
 
 
-class VideoAdmin(admin.ModelAdmin):
-    fields = ('url', 'servicio')
-    list_display = ('url', 'servicio')
-
-
-admin.site.register(Video, VideoAdmin)
+# class VideoAdmin(admin.ModelAdmin):
+#     fields = ('url', 'servicio')
+#     list_display = ('url', 'servicio')
+#
+#
+# admin.site.register(Video, VideoAdmin)

@@ -34,9 +34,11 @@ class ListaServicio(ListView):
         return queryset
 
 
-# method_decorator(xframe_options_exempt, name='dispath')
-
-
+@method_decorator(xframe_options_exempt, name='dispatch')
 class DetalleServicio(DetailView):
     template_name = "detalle_servicio/servicio.html"
     model = Servicio
+
+    # @method_decorator(xframe_options_exempt)
+    # def dispatch(self, *args, **kwargs):
+    #     return super(DetalleServicio, self).dispatch(*args, **kwargs)

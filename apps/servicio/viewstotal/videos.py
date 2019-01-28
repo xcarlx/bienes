@@ -83,7 +83,7 @@ class SuccessObject(LoginRequiredMixin, View):
             objecdic = {
                 "mensaje": "Guardado Correctamente",
                 "datos": {
-                    "descripcion": objeto.url
+                    "descripcion": objeto.titulo
                 }
             }
         return JsonResponse(objecdic)

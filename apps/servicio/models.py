@@ -88,11 +88,11 @@ class Comentario(models.Model):
 
 class Video(models.Model):
     titulo = models.CharField(max_length=300)
-    url = models.URLField()
+    iframe = models.TextField()
     servicio = models.ForeignKey(Servicio, on_delete=models.CASCADE)
 
     def __str__(self):
-        return "%s" % (self.url)
+        return "%s" % (self.titulo)
 
     def get_absolute_url(self):
         return reverse('videos-success', kwargs={'pk': self.pk})
