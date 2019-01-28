@@ -48,35 +48,53 @@
         <h2>Servicios</h2>
     </div>
     <div class="row">
-        {% for fotos in foto1 %}
+        {% for servicio in servicio %}
             <div class="col-md-4">
-                <div class="service-media"><img src="{{ MEDIA_URL }}{{ fotos.imagen }}" alt=" "></div>
-                <div class="service-desc">
-                    <h3>{{ fotos.servicio }}</h3>
-                    <p>{{ fotos.servicio.descripcion }}</p>
-                </div>
+                <a href="{% url 'detalle-servicio' servicio.id %}" title="{{ servicio }}"
+                   data-lightbox-gallery="gallery1">
+                    {% for foto in servicio.foto_set.all|slice:":1" %}
+                        <div class="service-media"><img src="{{ MEDIA_URL }}{{ foto.imagen }}" alt=" "></div>
+                    {% endfor %}
+
+                    <div class="service-desc">
+                        <h3>{{ servicio }}</h3>
+                        <p>{{ servicio.descripcion }}</p>
+                    </div>
+                </a>
             </div>
         {% endfor %}
     </div>
     <div class="row">
         {% for fotos in foto2 %}
             <div class="col-md-4">
-                <div class="service-media"><img src="{{ MEDIA_URL }}{{ fotos.imagen }}" alt=" "></div>
-                <div class="service-desc">
-                    <h3>{{ fotos.servicio }}</h3>
-                    <p>{{ fotos.servicio.descripcion }}</p>
-                </div>
+                <a href="{% url 'detalle-servicio' servicio.id %}" title="{{ servicio }}"
+                   data-lightbox-gallery="gallery1">
+                    {% for foto in servicio1.foto_set.all|slice:":1" %}
+                        <div class="service-media"><img src="{{ MEDIA_URL }}{{ foto.imagen }}" alt=" "></div>
+                    {% endfor %}
+
+                    <div class="service-desc">
+                        <h3>{{ servicio }}</h3>
+                        <p>{{ servicio.descripcion }}</p>
+                    </div>
+                </a>
             </div>
         {% endfor %}
     </div>
     <div class="row">
         {% for fotos in foto3 %}
             <div class="col-md-4">
-                <div class="service-media"><img src="{{ MEDIA_URL }}{{ fotos.imagen }}" alt=" "></div>
-                <div class="service-desc">
-                    <h3>{{ fotos.servicio }}</h3>
-                    <p>{{ fotos.servicio.descripcion }}</p>
-                </div>
+                <a href="{% url 'detalle-servicio' servicio.id %}" title="{{ servicio }}"
+                   data-lightbox-gallery="gallery1">
+                    {% for foto in servicio2.foto_set.all|slice:":1" %}
+                        <div class="service-media"><img src="{{ MEDIA_URL }}{{ foto.imagen }}" alt=" "></div>
+                    {% endfor %}
+
+                    <div class="service-desc">
+                        <h3>{{ servicio }}</h3>
+                        <p>{{ servicio.descripcion }}</p>
+                    </div>
+                </a>
             </div>
         {% endfor %}
     </div>

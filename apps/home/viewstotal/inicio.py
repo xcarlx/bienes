@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.views.generic import TemplateView
 from django.views import View
 
-from apps.servicio.models import Foto
+from apps.servicio.models import Servicio
 from ..models import Principal
 from ..formstotal.login import FormLogin
 
@@ -17,10 +17,10 @@ class HomeTemplate(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(HomeTemplate, self).get_context_data(**kwargs)
         context['principal'] = Principal.objects.filter(estado=True).order_by("id").last()
-        foto = Foto.objects.filter(orden=1).order_by("-servicio__id")[:9]
-        context['foto1'] = foto[:3]
-        context['foto2'] = foto[3:6]
-        context['foto3'] = foto[6:9]
+        servicio = Servicio.objects.all().order_by("-id")[:9]
+        context['servicio'] = servicio[:3]
+        context['servicio1'] = servicio[3:6]
+        context['servicio2'] = servicio[6:9]
         return context
 
 
