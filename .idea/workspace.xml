@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="48963713-2568-4ddd-aecb-66d3dc814528" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/templates/detalle_servicio/servicio.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/detalle_servicio/servicio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/viewstotal/lista_servicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/viewstotal/lista_servicio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bienes/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bienes/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -593,7 +590,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548629512887</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="settings">
+      <created>1548641856115</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1548641856115</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -607,7 +611,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1093" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4993804" visible="true" weight="0.34664536" />
       <window_info id="Structure" order="1" sideWeight="0.5006196" side_tool="true" weight="0.27635783" />
