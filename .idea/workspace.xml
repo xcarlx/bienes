@@ -4,7 +4,6 @@
     <list default="true" id="48963713-2568-4ddd-aecb-66d3dc814528" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/home/templates/detalle_servicio/servicio.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/detalle_servicio/servicio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bienes/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bienes/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -124,8 +123,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/home/templates/detalle_servicio/servicio.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="204" column="36" selection-start-line="204" selection-start-column="36" selection-end-line="204" selection-end-column="36" />
+            <state relative-caret-position="312">
+              <caret line="203" column="38" lean-forward="true" selection-start-line="203" selection-start-column="38" selection-end-line="203" selection-end-column="38" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#!!top" expanded="true" />
               </folding>
@@ -145,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bienes/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+            <state relative-caret-position="-742">
+              <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -681,7 +680,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548654257821</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="settings">
+      <created>1548740260678</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1548740260678</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -1060,15 +1066,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bienes/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+        <state relative-caret-position="-742">
+          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/home/templates/detalle_servicio/servicio.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="204" column="36" selection-start-line="204" selection-start-column="36" selection-end-line="204" selection-end-column="36" />
+        <state relative-caret-position="312">
+          <caret line="203" column="38" lean-forward="true" selection-start-line="203" selection-start-column="38" selection-end-line="203" selection-end-column="38" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#!!top" expanded="true" />
           </folding>
