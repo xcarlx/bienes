@@ -46,12 +46,12 @@
         }
 
         #map {
-            height: 100%;
+            height: 300px;
         }
 
         iframe {
             max-width: 100%;
-            height: auto;
+        {#height: auto;#}
         }
 
     </style>
@@ -190,18 +190,51 @@
     </div>
     <div class="row fila">
         <div class="col-md-6">
-            <h4>Ubicación Geografica</h4>
+            {% for punto in servicio.puntogeografico_set.all|slice:":1" %}
+                <h4>Ubicación Geografica</h4>
+                <div id="map"></div>
+                <script>
 
-            <div id="map"></div>
+                    var marker;
 
+                    function initMap() {
+                        var lat = parseFloat('{{ punto.latitud }}');
+                        var long = parseFloat('{{ punto.longitud }}');
+                        alert(long);
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 16,
+                            center: {lat: lat, lng: long}
+                        });
+
+                        marker = new google.maps.Marker({
+                            map: map,
+                            draggable: true,
+                            animation: google.maps.Animation.DROP,
+                            position: {lat: lat, lng: long}
+                        });
+                        marker.addListener('click', toggleBounce);
+                    }
+
+                    function toggleBounce() {
+                        if (marker.getAnimation() !== null) {
+                            marker.setAnimation(null);
+                        } else {
+                            marker.setAnimation(google.maps.Animation.BOUNCE);
+                        }
+                    }
+                </script>
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHMWi2lWoSpdC75kTgwneFsNkZb9sTKLE&callback=initMap">
+                </script>
+            {% endfor %}
         </div>
         <div class="col-md-6">
-            <h4>Video</h4>
-            <div id="player">
-                {% for video in servicio.video_set.all|slice:":1" %}
+            {% for video in servicio.video_set.all|slice:":1" %}
+                <h4>Video</h4>
+                <div id="player" style="margin: 1em;">
                     {{ video.iframe|safe }}
-                {% endfor %}
-            </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 
@@ -209,16 +242,16 @@
 
 {% block script_master %}
 
-    <script type="application/javascript">
-        var map;
-
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 8
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKyXnqbsNB_fkxU9aIWnQWoFDKa-uHJZs&callback=initMap"
-            async defer></script>
+    {#    <script type="application/javascript">#}
+    {#        var map;#}
+    {##}
+    {#        function initMap() {#}
+    {#            map = new google.maps.Map(document.getElementById('map'), {#}
+    {#                center: {lat: -34.397, lng: 150.644},#}
+    {#                zoom: 8#}
+    {#            });#}
+    {#        }#}
+    {#    </script>#}
+    {#    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKyXnqbsNB_fkxU9aIWnQWoFDKa-uHJZs&callback=initMap"#}
+    {#            async defer></script>#}
 {% endblock %}
