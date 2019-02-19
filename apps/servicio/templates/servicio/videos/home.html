@@ -1,3 +1,9 @@
+<style>
+    iframe{
+        width: 200px !important;
+        height: 120px !important;
+    }
+</style>
 <div class="dt-buttons" style="margin: 0.2em">
     <button id="btnNuevo1" type="button" class="btn btn-info fa fa-file"></button>
 </div>
@@ -13,9 +19,7 @@
     {% for objeto in object %}
         <tr>
             <td>
-                <a data-fancybox href="{{ objeto.url }}">
-                    {{ objeto.titulo }}
-                </a>
+                <div>{{ objeto.iframe|safe }}</div>
             </td>
 
             <td>

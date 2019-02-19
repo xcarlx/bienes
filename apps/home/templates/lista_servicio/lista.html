@@ -1,14 +1,36 @@
+{% load static %}
 {% for servicio in object_list %}
     <a href="{% url 'detalle-servicio' servicio.id %}" class="list-group-item">
         <h3 class="list-group-item-heading">{{ servicio.nombre }}</h3>
         <div class="row">
             <div class="col-md-3">
-                {% for fotos in servicio.foto_set.all|slice:":1" %}
-                    <div class="service-media">
-                        <img src="{{ MEDIA_URL }}{{ fotos.imagen }}" alt="Responsive image"
-                             style="height: 150px; width: 100%;" class="img-responsive img-thumbnail"></div>
-                    </div>
-                {% endfor %}
+                {% if servicio.foto_set.all.first == None %}
+                    {% if servicio.tipo_inmueble == "TE" %}
+                        <div class="service-media">
+                            <img src="{% static 'img/terreno.jpg' %}" alt="Responsive image"
+                                 style="height: 150px; width: 100%;" class="img-responsive img-thumbnail">
+                        </div>
+                    {% elif servicio.tipo_inmueble == "DE" %}
+                        <div class="service-media">
+                            <img src="{% static 'img/departamento.jpg' %}" alt="Responsive image"
+                                 style="height: 150px; width: 100%;" class="img-responsive img-thumbnail">
+                        </div>
+                    {% elif servicio.tipo_inmueble == "CA" %}
+                        <div class="service-media">
+                            <img src="{% static 'img/casa.jpg' %}" alt="Responsive image"
+                                 style="height: 150px; width: 100%;" class="img-responsive img-thumbnail">
+                        </div>
+                    {% endif %}
+                {% else %}
+                    {% for fotos in servicio.foto_set.all|slice:":1" %}
+                        <div class="service-media">
+                            <img src="{{ MEDIA_URL }}{{ fotos.imagen }}" alt="Responsive image"
+                                 style="height: 150px; width: 100%;" class="img-responsive img-thumbnail">
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
             <div class="col-md-6">
                 <div class="service-desc">
                     <p style="font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif">
@@ -88,17 +110,13 @@
 
 
 <script>
-
-    $(".pagination li a").each(function (index) {
-
+    var paginacion = $(".pagination li a");
+    paginacion.each(function (index) {
         var url = $(this).attr("href").replace("123", tipo);
         $(this).attr("href", url);
-
-
     });
-    $(".pagination li a").click(function (event) {
+    paginacion.click(function (event) {
         event.preventDefault();
-
         var url = $(this).attr("href");
         $("#idListaServicio").load(url);
 

@@ -1,4 +1,5 @@
 {% extends 'innova/page.html' %}
+{% load static %}
 {% block style_master %}
     <style>
         .fila {
@@ -68,28 +69,68 @@
     <div class="row fila">
         <div class="col-md-12">
             <div class="portfolio-item">
-                {% for fotos in object.foto_set.all %}
-                    {% if forloop.counter == 1 %}
-                        <div class="hover-bg"><a href="{{ MEDIA_URL }}{{ fotos.imagen }}" title="{{ object }}"
+                {% if object.foto_set.all.first == None %}
+                    {% if object.tipo_inmueble == "TE" %}
+                        <div class="hover-bg"><a href="{% static 'img/terreno.jpg' %}" title="{{ object }}"
                                                  data-lightbox-gallery="gallery1">
                             <div class="hover-text">
                                 <h4>{{ object }}</h4>
                             </div>
-                            <img src="{{ MEDIA_URL }}{{ fotos.imagen }}" class="img-responsive" alt="Responsive image"
+                            <img src="{% static 'img/terreno.jpg' %}" class="img-responsive"
+                                 alt="Responsive image"
                                  style="width: 100%">
                         </a>
                         </div>
-                    {% else %}
-                        <div class="hover-bg hidden"><a href="{{ MEDIA_URL }}{{ fotos.imagen }}" title="{{ object }}"
-                                                        data-lightbox-gallery="gallery1">
+                    {% elif object.tipo_inmueble == "DE" %}
+                        <div class="hover-bg"><a href="{% static 'img/departamento.jpg' %}" title="{{ object }}"
+                                                 data-lightbox-gallery="gallery1">
                             <div class="hover-text">
                                 <h4>{{ object }}</h4>
                             </div>
-                            <img src="{{ MEDIA_URL }}{{ fotos.imagen }}" class="img-responsive" alt="{{ object }}"> </a>
+                            <img src="{% static 'img/departamento.jpg' %}" class="img-responsive"
+                                 alt="Responsive image"
+                                 style="width: 100%">
+                        </a>
+                        </div>
+                    {% elif object.tipo_inmueble == "CA" %}
+                        <div class="hover-bg"><a href="{% static 'img/casa.jpg' %}" title="{{ object }}"
+                                                 data-lightbox-gallery="gallery1">
+                            <div class="hover-text">
+                                <h4>{{ object }}</h4>
+                            </div>
+                            <img src="{% static 'img/casa.jpg' %}" class="img-responsive"
+                                 alt="Responsive image"
+                                 style="width: 100%">
+                        </a>
                         </div>
                     {% endif %}
+                {% else %}
+                    {% for fotos in object.foto_set.all %}
+                        {% if forloop.counter == 1 %}
+                            <div class="hover-bg"><a href="{{ MEDIA_URL }}{{ fotos.imagen }}" title="{{ object }}"
+                                                     data-lightbox-gallery="gallery1">
+                                <div class="hover-text">
+                                    <h4>{{ object }}</h4>
+                                </div>
+                                <img src="{{ MEDIA_URL }}{{ fotos.imagen }}" class="img-responsive"
+                                     alt="Responsive image"
+                                     style="width: 100%">
+                            </a>
+                            </div>
+                        {% else %}
+                            <div class="hover-bg hidden"><a href="{{ MEDIA_URL }}{{ fotos.imagen }}"
+                                                            title="{{ object }}"
+                                                            data-lightbox-gallery="gallery1">
+                                <div class="hover-text">
+                                    <h4>{{ object }}</h4>
+                                </div>
+                                <img src="{{ MEDIA_URL }}{{ fotos.imagen }}" class="img-responsive" alt="{{ object }}">
+                            </a>
+                            </div>
+                        {% endif %}
 
-                {% endfor %}
+                    {% endfor %}
+                {% endif %}
 
             </div>
         </div>
