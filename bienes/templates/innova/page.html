@@ -53,15 +53,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="{% url 'home' %}">INMOCASA</a>
-{#            <div class="phone"><span>LLamar Hoy</span>944 999 999</div>#}
+            <a class="navbar-brand page-scroll" href="">INMOCASA</a>
+            {#            <div class="phone"><span>LLamar Hoy</span>944 999 999</div>#}
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li><a valor="true" href="{% url 'home-administracion' %}" class="page-scroll">Login</a></li>
-                <li><a href="#services" class="page-scroll">Servicios</a></li>
+                <li><a href="{% url 'lista-servicio-home' 0 %}" class="page-scroll">Servicios</a></li>
 
             </ul>
         </div>
