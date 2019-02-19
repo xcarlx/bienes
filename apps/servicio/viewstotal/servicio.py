@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.views.generic import TemplateView, UpdateView, DeleteView, CreateView
 from django.views.generic.base import View
 
-from ..models import Servicio as Object
+from ..models import Servicio as Object, Persona
 from ..formstotal.servicio import ServicioForm as Formulario, ServicioEditarForm
 
 
@@ -128,3 +128,45 @@ class DeleteObject(LoginRequiredMixin, DeleteView):
 
     def get_success_url(self):
         return reverse('adm-success', kwargs={'pk': 0})
+
+
+class ListaPersona(LoginRequiredMixin, View):
+    login_url = 'login'
+
+    def get(self, request):
+        search = request.GET.get('search', "")
+        page = request.GET.get('page', 1)
+        # if length is None:
+        #     length = 0
+        # if order0 is not None:
+        #     if order0 == "asc":
+        #         order0 = ''
+        #     else:
+        #         order0 = '-'
+        # if start is not None:
+        #     start = (int(start) / int(length)) + 1
+
+        if search is not None:
+            objeto = Persona.objects.filter(
+                Q(nombre_completo__icontains=search)
+            ).order_by('-id')
+            total = objeto.count()
+            paginator = Paginator(objeto, 20)
+            obj = paginator.get_page(page)
+
+            lista = list()
+            for object in obj:
+                dict = {
+                    "id": object.id,
+                    "text": object.nombre_completo
+                }
+                lista.append(dict)
+            object = {
+                # "draw": draw,
+                # "recordsTotal": total,
+                # "recordsFiltered": total,
+                "results": lista,
+                "pagination": {"more": True}
+            }
+            return JsonResponse(object)
+        return JsonResponse({})

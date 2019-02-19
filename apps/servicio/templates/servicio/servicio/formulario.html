@@ -21,3 +21,84 @@
             {% endif %}
     {% endif %}
 {% endfor %}
+<script>
+    {#$.fn.select2.defaults.set("theme", "classic");#}
+    var modal_body = $('#Modal .modal-body');
+    $('#id_proveedor').select2({
+        dropdownParent: modal_body,
+        placeholder: "Seleccione un opción",
+        minimumInputLength: 4,
+        allowClear: true,
+        width: 'resolve',
+        {#dropdownAutoWidth: true,#}
+        ajax: {
+            url: '{% url 'servicio-lista-persona' %}',
+            dataType: 'json',
+            data: function (params) {
+                var query = {
+                    search: params.term,
+                    page: params.page || 1
+                };
+
+                // Query parameters will be ?search=[term]&page=[page]
+                return query;
+            },
+            processResults: function (data, params) {
+                params.page = params.page || 1;
+
+                return {
+                    results: data.results,
+                    pagination: {
+                        more: (params.page * 20) < data.count_filtered
+                    }
+                };
+            }
+
+            // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
+        }
+    });
+
+    $('#id_cliente').select2({
+        dropdownParent: modal_body,
+        placeholder: "Seleccione un opción",
+        minimumInputLength: 4,
+        allowClear: true,
+        width: 'resolve',
+        dropdownAutoWidth: true,
+        ajax: {
+            url: '{% url 'servicio-lista-persona' %}',
+            dataType: 'json',
+            data: function (params) {
+                var query = {
+                    search: params.term,
+                    page: params.page || 1
+                };
+
+                // Query parameters will be ?search=[term]&page=[page]
+                return query;
+            },
+            processResults: function (data, params) {
+                params.page = params.page || 1;
+
+                return {
+                    results: data.results,
+                    pagination: {
+                        more: (params.page * 20) < data.count_filtered
+                    }
+                };
+            }
+            // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
+        }
+    });
+
+    $('.select2class').select2({
+        dropdownParent: modal_body,
+        placeholder: "Seleccione un opción",
+        allowClear: true,
+        width: 'resolve',
+        dropdownAutoWidth: true,
+    });
+    $.fn.select2.defaults.set("ajax--cache", true);
+    $.fn.select2.defaults.reset();
+
+</script>

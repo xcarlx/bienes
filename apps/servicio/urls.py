@@ -30,6 +30,7 @@ urlpatterns = [
     path('servicio/<int:pk>/editar/', servicio.UpdateObject.as_view(), name='servicio-editar'),
     path('servicio/<int:pk>/eliminar/', servicio.DeleteObject.as_view(), name='servicio-eliminar'),
     path('servicio/success/<int:pk>/', servicio.SuccessObject.as_view(), name='servicio-success'),
+    path('servicio/lista/persona/', servicio.ListaPersona.as_view(), name='servicio-lista-persona'),
 
     path('comentario/<int:servicio>/', comentario.Home.as_view(), name='comentario-home'),
     path('comentario/principal/<int:servicio>/data/', comentario.ListaObject.as_view(), name='comentario-data'),
